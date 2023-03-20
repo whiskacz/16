@@ -1,6 +1,8 @@
 
 import './App.css';
 import  React, { Component } from 'react';
+import Text from './Text'
+
 
 class App extends Component {
   state = {
@@ -46,10 +48,11 @@ if(this.state.active2){
 
 
   return (
-    <div className="App">
+    <div className="app">
       <button style={this.state.active1 ? btn_on : btn_off} onClick={() => {this.setState({active1: !this.state.active1})}}>{this.state.active1 ? "WŁĄCZ" : "WYŁĄCZ"}</button>
       <button style={btn} onClick={() => {this.setState({active2: !this.state.active2})}}>{this.state.active2 ? "WŁĄCZ" : "WYŁĄCZ"}</button>
-    
+      <h1>Witaj na stronie</h1>
+      <Text />
     </div>
   );
 }
